@@ -17,13 +17,18 @@ public class App
 //        System.out.println( "Hello World!" );
         DummyRecord d = new DummyRecord();
 		File inputFile = new File("C:\\Users\\Ajai V Kamath\\Documents\\Result.xlsx");
-		File outputFile = new File("E:\\Test1.csv");
 		File outputExtractFile = new File("C:\\Users\\Ajai V Kamath\\Documents\\New_Test6.xlsx");
+		File inputXLSFile = new File("C:\\Users\\Ajai V Kamath\\Documents\\Result.xls");
+		File outputExtractXLSFile = new File("C:\\Users\\Ajai V Kamath\\Documents\\New_Test6.xls");
 		
 		XLSReadWriter xlsWriter = new XLSReadWriter();
-		List<Object> dataObjectList = xlsWriter.uploadXLSX(inputFile, outputFile, DummyRecord.class);
-		xlsWriter.writeXLSX(dataObjectList, outputExtractFile);
+		List<Object> dataObjectList = xlsWriter.uploadXLSX(inputFile, DummyRecord.class);
+		//xlsWriter.writeXLSX(dataObjectList, outputExtractFile);
 
+		//List<Object> dataObjectList2 = xlsWriter.uploadXLS(inputXLSFile, DummyRecord.class);
+		xlsWriter.writeXLS(dataObjectList, outputExtractXLSFile);
+
+		
         Field[] fields = d.getPrivateFields();
         System.out.println(fields.length);
         
