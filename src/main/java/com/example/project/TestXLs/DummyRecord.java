@@ -25,7 +25,7 @@ public class DummyRecord extends ExcelReadWriteEnabler
 	
 	public String[] getHeaders()
 	{
-		String[] header = {"Rec1","Rec2","Rec3","Rec4","Rec5"};
+		String[] header = {"rec1","rec2","rec3","rec4","rec5"};
 		return header;
 	}
 
